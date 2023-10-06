@@ -4,7 +4,6 @@ import PageHeaderContent from '../../components/pageHeaderContent';
 import { Animate } from 'react-simple-animate'
 import './styles.scss'
 import { FaLinkedin, FaInstagram, FaGithub, FaEnvelope } from 'react-icons/fa'
-import { MdPhone } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 
 const ExternalLink = ({ to, children, className }) => (
@@ -101,9 +100,6 @@ const contact = () => {
             </ExternalLink>
 
 
-            <Link to={`tel"8103754302`} className="icon">
-              <MdPhone size={35} />
-            </Link>
 
 
           </div>
