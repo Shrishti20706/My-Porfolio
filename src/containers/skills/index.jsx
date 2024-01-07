@@ -5,7 +5,7 @@ import { skilldata } from './utils';
 import { Animate, AnimateKeyframes } from 'react-simple-animate'
 import { Line } from 'rc-progress';
 import './styles.scss';
-
+ 
 const skills = () => {
   return (
     <section id="skills" className='skills'>

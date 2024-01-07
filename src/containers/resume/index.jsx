@@ -9,7 +9,7 @@ import { data } from './utils';
 import "react-vertical-timeline-component/style.min.css"
 import './styles.scss'
 import {MdWork} from 'react-icons/md'
- 
+
  const Resume=()=> {
   return (
     <section id="resume" className='resume'>
@@ -40,7 +40,7 @@ import {MdWork} from 'react-icons/md'
 
                 }}
                 >
-                 
+                  
                   <div className='verical-timeline-element-title-wrapper'>
                   
                     <h3>
