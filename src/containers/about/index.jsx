@@ -30,7 +30,7 @@ const personalDetails = [
   },
 ];
 
-const jobSummary = "I'm a Frontend Developer with a strong background in HTML, CSS, JavaScript, and modern frameworks. My objective is to collaborate effectively within cross-functional teams and apply my technical skills to design and develop outstanding user experiences. I'm enthusiastic about contributing my expertise to enhance Company's web projects and drive their mission forward.";
+const jobSummary = "I'm a Frontend Developer with a strong background in HTML, CSS, JavaScript, ReactJs ,Java ,RPA and modern frameworks. My objective is to collaborate effectively within cross-functional teams and apply my technical skills to design and develop outstanding user experiences. I'm enthusiastic about contributing my expertise to enhance Company's web projects and drive their mission forward.";
 const About = () => {
   return (
     <section id="about" className='about'>
