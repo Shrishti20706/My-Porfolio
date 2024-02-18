@@ -12,7 +12,7 @@ import { useState } from "react";
 
 const portfolioData = [
   {
-    id: 1,
+    id: 2,
     name: "Solvitude",
     link: "https://solvitude.vercel.app/",
     image: ImageOne,
@@ -28,7 +28,7 @@ const portfolioData = [
     description: "Manage Contact App include adding contact details like name and email and also store on Local Storage and can also delete contact details",
   },
   {
-    id: 3,
+    id: 2,
     name: "Department website",
     link: "https://shrishti20706.github.io/department-webpage/",
     image: ImageThree,
@@ -36,7 +36,7 @@ const portfolioData = [
     description: "A webpage of CSIT department displaying all the information related to department along with subscription form",
   },
   {
-    id: 4,
+    id: 2,
     name: "TextCraft",
     link: "https://text-craft-mu.vercel.app",
     image: ImageFour,
@@ -44,7 +44,7 @@ const portfolioData = [
     description: "Text manipulation tool for text-editing tasks like remove extra space,convert to lowercase or uppercase etc.",
   },
   {
-    id: 5,
+    id: 3,
     name: "RPA Project-Curriculum Vitae Colander:",
     link: "",
     Tech:"RPA using Uipath",
@@ -52,7 +52,7 @@ const portfolioData = [
     description: "The aim of this project is to sort the resumes domain wise for easy screening of the candidates suited.",
   },
   {
-    id: 6,
+    id: 3,
     name: "Telephone Directory",
     link: "https://github.com/Shrishti20706/TelephoneDirectory",
     Tech:" C++",
