@@ -16,6 +16,8 @@ function App() {
 
   const location=useLocation();
   console.log(location);
+
+
   const handleInit=async(main)=>{
     await loadFull(main)
   }
@@ -24,6 +26,7 @@ function App() {
   return (
     <div className="App">
       {/** particles js */}
+      {/* to show particle on home page only renderparticleJsInHomePage */}
       {
         renderparticleJsInHomePage && 
         <Particles id="particles" options={particles} init={handleInit}/>

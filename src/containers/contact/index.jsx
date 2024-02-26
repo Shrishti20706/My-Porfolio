@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useState, useRef } from 'react';
 import { BsInfoCircleFill } from 'react-icons/bs';
 import PageHeaderContent from '../../components/pageHeaderContent';
-import { Animate } from 'react-simple-animate'
-import './styles.scss'
-import { FaLinkedin, FaInstagram, FaGithub, FaEnvelope } from 'react-icons/fa'
+import { Animate } from 'react-simple-animate';
+import './styles.scss';
+import { FaLinkedin, FaInstagram, FaGithub, FaEnvelope } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const ExternalLink = ({ to, children, className }) => (
@@ -12,8 +12,21 @@ const ExternalLink = ({ to, children, className }) => (
   </a>
 );
 
+const Contact = () => {
+  const [submitted, setSubmitted] = useState(false);
+  const formRef = useRef(null);
 
-const contact = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    // Show alert upon successful submission
+    alert('Submitted successfully');
+    setSubmitted(true);
+
+    // Reset form fields
+    formRef.current.reset();
+  };
+
   return (
     <section id="contact" className='contact'>
       <PageHeaderContent
@@ -33,7 +46,6 @@ const contact = () => {
             transform: "translateX(0px)"
           }}>
           <h3 className='contact__content__header-text'>Let's Talk</h3>
-
         </Animate>
         <Animate
           play
@@ -45,25 +57,23 @@ const contact = () => {
           end={{
             transform: "translateX(0px)"
           }}>
-          <div className='contact__content__form'>
+          <form ref={formRef} className='contact__content__form' onSubmit={handleSubmit}>
             <div className='contact__content__form__controlswrapper'>
               <div>
-                <input required name='name' className='inputname' type='text'></input>
+                <input required name='name' className='inputname' type='text' />
                 <label htmlFor='name' className='nameLabel'>Name</label>
               </div>
-              <div >
-                <input required name='email' className='inputemail' type='text'></input>
+              <div>
+                <input required name='email' className='inputemail' type='email' />
                 <label htmlFor='email' className='emailLabel'>Email</label>
               </div>
-              <div >
-                <textarea required name='description' className='inputdescription' rows="7" type='text' ></textarea>
+              <div>
+                <textarea required name='description' className='inputdescription' rows="7" type='text' />
                 <label htmlFor='description' className='descriptionLabel'>Description</label>
               </div>
-
             </div>
-            <button>Submit</button>
-          </div>
-
+            <button type="submit">Submit</button>
+          </form>
         </Animate>
       </div>
 
@@ -81,34 +91,23 @@ const contact = () => {
         >
           <h3>Connect with me on</h3>
           <div className='connection__socialmedia'>
-
-
-
             <ExternalLink to={`https://www.linkedin.com/in/shrishti-jain-16ba74206/`} className="icon">
               <FaLinkedin size={35} />
             </ExternalLink>
-
             <ExternalLink to={`https://github.com/Shrishti20706`} className="icon">
               <FaGithub size={35} />
             </ExternalLink>
-
             <Link to={`mailto:shrishtiniaj2661@gmail.com`} className="icon">
               <FaEnvelope size={35} />
             </Link>
             <ExternalLink to={`https://www.instagram.com/shrishti_niaj/`} className="icon">
               <FaInstagram size={35} />
             </ExternalLink>
-
-
-
-
           </div>
         </Animate>
-
-
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default contact;
+export default Contact;
